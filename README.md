@@ -56,3 +56,28 @@ The script will:
 - Python 3.10+
 - PyTorch with CUDA support
 - NVIDIA GPU (optional, for faster training)
+
+## Recent Updates and Bug Fixes
+
+### April 2025 Update
+
+Fixed several critical issues to make the prediction system fully functional:
+
+1. **Model Architecture Fix**: Corrected input size mismatch (from 10 to 25 features) that was preventing the model from loading correctly.
+
+2. **Data Handling Improvements**:
+   - Added support for missing 'onpromotion' column in test data
+   - Added handling for missing store statistics columns in test data
+   - Improved feature creation for prediction data
+
+3. **Prediction Alignment Fix**: Implemented more robust prediction alignment logic to correctly map model outputs to test records, fixing the all-zero predictions issue.
+
+4. **Debugging and Monitoring**: Added detailed statistics and diagnostics to monitor model performance.
+
+### Future Improvements
+
+Planned enhancements for the next version:
+- Calculate actual historical statistics rather than using zeros
+- Improve feature engineering for test data
+- Fine-tune model with more training data
+- Adjust inverse log transformation for better prediction scaling
